@@ -1,0 +1,207 @@
+/* For Navbar*/
+html {
+    box-sizing: border-box;
+  }
+  *, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+nav {
+    width: 100%;
+    background-color:black;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: inline-block;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-item:hover {
+    background-color: white;
+  }
+  
+  .nav-item:hover a {
+    color: darkgreen;
+  }
+  
+  .logo img {
+    width: 175px;
+    vertical-align: middle;
+  }
+  /* to hide body overflow*/
+  body{
+    overflow: hidden;
+   
+  }
+  /* for first part*/
+.masthead{
+  display: grid; 
+  background:url(hands.jpg);
+    background-size:cover;
+    background-repeat: no-repeat; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    
+}
+
+.mast-text{
+  text-align: center;
+  color: white;
+margin-bottom: 4rem;
+}
+
+.mast-text2{
+  grid-column:2 ;
+}
+
+/*for button on firstpart*/
+.myButton {
+
+	-moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+	box-shadow: 0px 1px 0px -5px #3dc21b;
+	background-color:#44c767;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  text-shadow:-1px 0px 0px #2f6627;
+  text-align: center;
+  line-height:1.2rem;
+  height: 3rem;
+  
+/* Button placement*/
+
+  width: fit-content;
+  grid-column: 2;
+  margin-left:10rem;
+}
+
+.myButton:hover {
+	background-color:#5cbf2a;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+.getintouch{
+  background: white;
+}
+/* second part*/
+.getintouch{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+
+}
+.bodytext1 {
+grid-column: 1;
+grid-row:1;
+margin:3rem;
+padding-right: 2rem;
+}
+p.bodytext1 {
+  grid-row:2;
+  grid-column:1;
+}
+.myButton2{
+  -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+	box-shadow: 0px 1px 0px -5px #3dc21b;
+	background-color:#44c767;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  text-shadow:-1px 0px 0px #2f6627;
+  text-align: center;
+  line-height:1.2rem;
+  height: 3rem;
+  width: fit-content;
+  grid-column: 1;
+  grid-row:3;
+  margin-left:10rem;
+  
+}
+.myButton2:hover {
+	background-color:#5cbf2a;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.bodytext2{
+  grid-column: 2;
+  grid-row:1;
+  margin:3rem;
+padding-right: 2rem;
+}
+p.bodytext2  { 
+  grid-row: 2;
+  grid-column:2;
+}
+.myButton3{
+  -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+	box-shadow: 0px 1px 0px -5px #3dc21b;
+	background-color:#44c767;
+	-moz-border-radius:9px;
+	-webkit-border-radius:9px;
+	border-radius:9px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  text-shadow:-1px 0px 0px #2f6627;
+  text-align: center;
+  line-height:1.2rem;
+  height: 3rem;
+  width: fit-content;
+  grid-column: 2;
+  grid-row: 3;
+  margin-left:10rem;
+  
+}
+.myButton3:hover {
+	background-color:#5cbf2a;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
