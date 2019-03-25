@@ -17,8 +17,8 @@ nav {
     align-items: center;
   }
   
-  .logo {
-    display: inline-block;
+  .fab {
+    color: aqua;
   }
   
   .nav-links {
@@ -45,10 +45,11 @@ nav {
     width: 175px;
     vertical-align: middle;
   }
-  /* to hide body overflow*/
-  body{
+  /* Container*/
+  .container{
+    max-width:100%;
     overflow: hidden;
-   
+
   }
   /* for first part*/
 .masthead{
@@ -58,6 +59,7 @@ nav {
     background-repeat: no-repeat; 
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:1fr 1fr 1fr;
+    padding-bottom: 5em;
     
 }
 
@@ -70,18 +72,22 @@ margin-bottom: 4rem;
 .mast-text2{
   grid-column:2 ;
 }
-
+h4.mast-text{
+  font-size:20px;
+}
+h1.mast-text{
+  font-size: 40px;
+}
 /*for button on firstpart*/
 .myButton {
 
 	-moz-box-shadow: 0px 1px 0px -5px #3dc21b;
 	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
 	box-shadow: 0px 1px 0px -5px #3dc21b;
-	background-color:#44c767;
-	-moz-border-radius:9px;
-	-webkit-border-radius:9px;
-	border-radius:9px;
-	border:1px solid #18ab29;
+	background-color:#cd213b;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
 	display:inline-block;
 	cursor:pointer;
 	color:#ffffff;
@@ -93,93 +99,93 @@ margin-bottom: 4rem;
   text-align: center;
   line-height:1.2rem;
   height: 3rem;
+  justify-self:center;
   
 /* Button placement*/
 
   width: fit-content;
   grid-column: 2;
-  margin-left:10rem;
 }
 
 .myButton:hover {
-	background-color:#5cbf2a;
+	background-color:#b10f0fa2;
 }
 .myButton:active {
 	position:relative;
 	top:1px;
 }
-.getintouch{
-  background: white;
-}
+
 /* second part*/
 .getintouch{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-
+  grid-template-areas: 
+"hr .  ."
+"bodytext1 vl bodytext2"
+"bodyp1  vl bodyp2"
+". vl ."
+"myButton2 vl myButton3"
+  ;
+padding-bottom: 10em;
 
 }
 .bodytext1 {
-grid-column: 1;
-grid-row:1;
+grid-area: bodytext1;
 margin:3rem;
 padding-right: 2rem;
+justify-self:self-start;
 }
-p.bodytext1 {
-  grid-row:2;
-  grid-column:1;
+.bodyp1 {
+  grid-area:bodyp1;
+  justify-self: self-start;
+  margin-left:3rem;
 }
-.myButton2{
-  -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
-	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
-	box-shadow: 0px 1px 0px -5px #3dc21b;
-	background-color:#44c767;
-	-moz-border-radius:9px;
-	-webkit-border-radius:9px;
-	border-radius:9px;
-	border:1px solid #18ab29;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:16px 31px;
-	text-decoration:none;
-  text-shadow:-1px 0px 0px #2f6627;
-  text-align: center;
-  line-height:1.2rem;
-  height: 3rem;
+a.myButton2{
+  grid-area: myButton2;
+  padding:0.5em 1.45em;
+  margin:1rem;
+  border:0.15em solid #CCCCCC;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto Slab', serif;
+  font-weight:400;
+  color:#000000;
+  background-color:#CCCCCC;
+  text-align:center;
+  position:relative;
   width: fit-content;
-  grid-column: 1;
-  grid-row:3;
-  margin-left:10rem;
-  
-}
-.myButton2:hover {
-	background-color:#5cbf2a;
-}
-.myButton2:active {
-	position:relative;
-	top:1px;
-}
+  }
+  a.myButton2:hover{
+  border-color:#7a7a7a;
+  }
+  a.mybutton2:active{
+  background-color:#999999;
+  }
+  @media all and (max-width:30em){
+   a.myButton2{
+display:block;
+  margin:0.2em auto;
+  }
+  }
 .bodytext2{
-  grid-column: 2;
-  grid-row:1;
+  grid-area: bodytext2;
   margin:3rem;
 padding-right: 2rem;
+justify-self: self-start;
 }
-p.bodytext2  { 
-  grid-row: 2;
-  grid-column:2;
+.bodyp2 { 
+  grid-area: bodyp2;
+  justify-self:self-start;
+  margin-left:3rem;
 }
 .myButton3{
+  grid-area:myButton3;
   -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
 	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
 	box-shadow: 0px 1px 0px -5px #3dc21b;
-	background-color:#44c767;
-	-moz-border-radius:9px;
-	-webkit-border-radius:9px;
-	border-radius:9px;
+	background-color:#cd213b;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
 	border:1px solid #18ab29;
 	display:inline-block;
 	cursor:pointer;
@@ -192,16 +198,201 @@ p.bodytext2  {
   text-align: center;
   line-height:1.2rem;
   height: 3rem;
-  width: fit-content;
-  grid-column: 2;
-  grid-row: 3;
-  margin-left:10rem;
+  width: 25rem;
+  margin-top: 1.2rem;
+ justify-self: self-start;
   
 }
 .myButton3:hover {
-	background-color:#5cbf2a;
+	background-color:#b10f0fa2;
+	
 }
 .myButton3:active {
 	position:relative;
 	top:1px;
+}
+.hr{
+  grid-area: hr;
+  border-bottom: 12px solid red;
+  margin-left: 3rem;
+  width:8rem;
+  margin-top:3rem;
+  margin-bottom:-1rem;
+
+
+}
+.vl{
+  
+  grid-area: vl;
+  border-left: 1px solid red;
+  width: fit-content;
+  
+}
+
+/* our services section*/
+.ourservices{
+  display:grid;
+  background: #971a42;
+  margin-top:5rem;
+  padding-bottom: 5em;
+  
+  
+}
+.hr2{
+  border-bottom: 12px solid red;
+  width:8rem;
+  justify-self: center;
+  margin-top:3rem;
+  
+}
+.servicetext{
+  text-align: center;
+  margin-top:1.5rem;
+  
+
+}
+.ourservices p{
+  margin-bottom: 1.5rem;
+  color: white;
+}
+.row img{
+  width:400px;
+  height:300px;
+}
+h2.servicetext{
+  font-size:2.5rem;
+  color: white;
+}
+
+/* grid area for our services pictures*/
+.row{
+  justify-items: center;
+  display:grid;
+  grid-row-gap:50px;
+  grid-template-areas:
+  "pics1 pics2 pics3"
+  "pics4 pics5 pics6";
+ 
+}
+.pics1{
+  grid-area:pics1; 
+}
+.pics2{
+  grid-area:pics2; 
+}
+.pics3{
+  grid-area:pics3; 
+}
+.pics4{
+  grid-area:pics4; 
+}
+.pics5{
+  grid-area:pics5; 
+}
+.pics6{
+  grid-area:pics6; 
+}
+.text{
+  grid-area:text;
+}
+a {text-decoration: none; }
+.row h3{
+  text-align: center;
+  color:white;
+  margin-top: 1.5rem;
+}
+/* contact us on home page design*/
+.contactushome{
+  background:#5b1446;
+  display:flex;
+  /*
+  grid-template-areas: "hr3 ."
+  "h2 ." "p1 ." "p2 ." "h6 ." "p3 ." ".  form";*/
+}
+.hr3{
+  border-bottom: 12px solid red;
+  margin-left: 3rem;
+  width:8rem;
+  margin-top:3rem;
+ 
+}
+.hr4{
+  margin:0.5rem;
+    height: 0.8px;
+    border: 0;
+    background-color: white;
+
+  
+}
+.contactushome h2{
+ margin: 1rem auto auto 0.8rem;
+color: white;
+}
+
+.p1,.p2,.p3{
+  margin-left: 0.8rem;
+  color: white;
+}
+form{
+  grid-area:form;
+} 
+
+#formcontainer{
+  display:flex;
+   width:40%;
+   margin:auto;
+   justify-content: center;
+ }
+/*input[type="number"]{
+  width:37.8rem;
+}*/
+.colspace{
+  width:38rem;
+  margin:auto auto 0.3rem auto;
+}
+textarea{
+  width:38rem;
+}
+.myButton4 {
+display:flex;
+	-moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+	-webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+	box-shadow: 0px 1px 0px -5px #3dc21b;
+	background-color:#cd213b;
+	-moz-border-radius:1px;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:16px 31px;
+	text-decoration:none;
+  text-shadow:-1px 0px 0px #2f6627;
+  text-align: center;
+  line-height:1.2rem;
+  height: 3rem; 
+  justify-self:center;
+  width: 38rem;
+
+}
+.column{
+  margin-bottom: 0.4rem;
+}
+.myButton4:hover {
+	background-color:#b10f0fa2;
+}
+.myButton4:active {
+	position:relative;
+	top:1px;
+}
+/* For header and body fonts font-family: 'Germania One', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Roboto Slab', serif;*/
+header{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+body{
+  font-family: 'Source Sans Pro', sans-serif;
 }
