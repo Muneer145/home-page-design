@@ -73,10 +73,10 @@ margin-bottom: 4rem;
   grid-column:2 ;
 }
 h4.mast-text{
-  font-size:20px;
+  font-size:15px;
 }
 h1.mast-text{
-  font-size: 40px;
+  font-size: 30px;
 }
 /*for button on firstpart*/
 .myButton {
@@ -125,7 +125,7 @@ h1.mast-text{
 ". vl ."
 "myButton2 vl myButton3"
   ;
-padding-bottom: 10em;
+
 
 }
 .bodytext1 {
@@ -339,8 +339,8 @@ form{
 
 #formcontainer{
   display:flex;
-   width:40%;
-   margin:auto;
+   width:46%;
+   margin-top:2rem;
    justify-content: center;
  }
 /*input[type="number"]{
@@ -393,6 +393,333 @@ font-family: 'Roboto Slab', serif;*/
 header{
   font-family: 'Source Sans Pro', sans-serif;
 }
-body{
-  font-family: 'Source Sans Pro', sans-serif;
+
+/*media queries*/
+
+@media (min-width: 320px) and (max-width: 767px){
+  
+  html, body{
+    width:100%;
+    overflow-x:hidden;
+    
+    }
+  .masthead{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+      
+  }
+  
+  
+  /*for button on firstpart*/
+  .myButton {
+  
+    -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+    -webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+    box-shadow: 0px 1px 0px -5px #3dc21b;
+    background-color:#cd213b;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:-1px 0px 0px #2f6627;
+    text-align: center;
+    line-height:1.2rem;
+    height: 3rem;
+    justify-self:center;
+    
+  /* Button placement*/
+  
+    width: fit-content;
+    grid-column: 2;
+  }
+  
+  .myButton:hover {
+    background-color:#b10f0fa2;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
+  }
+  
+  /* second part*/
+  .getintouch{
+    display: grid;
+
+    grid-template-areas: 
+    "hr hr"    
+    "bodytext1 bodytext1"  
+    "bodyp1 bodyp1"  
+    "myButton2 myButton2"   
+    "bodytext2 bodytext2" 
+    "bodyp2 bodyp2"
+    "myButton3 myButton3"
+    ;
+  
+  }
+  .bodytext1 {
+  grid-area: bodytext1;
+  margin:3rem;
+  padding-right: 0rem;
+  justify-self:self-start;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  }
+  .bodyp1 {
+    grid-area:bodyp1;
+    justify-self: center;
+    margin-left: 0.2rem;
+    font-size: 16px;
+  }
+  a.myButton2{
+    grid-area: myButton2;
+    padding: 0.5em 1.45em;
+    margin: 2rem 0 0 -1rem;
+    border: 0.15em solid #CCCCCC;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #CCCCCC;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    justify-self: center;
 }
+    
+    a.myButton2:hover{
+    border-color:#7a7a7a;
+    }
+    a.mybutton2:active{
+    background-color:#999999;
+    }
+    @media all and (max-width:30em){
+     a.myButton2{
+  display:block;
+    margin:0.2em auto;
+    }
+    }
+  .bodytext2{
+    grid-area: bodytext2;
+    margin-top: 7rem;
+    padding-right: 0rem;
+    text-align: center;
+  }
+  .bodyp2 { 
+    grid-area: bodyp2;
+    justify-self: self-start;
+    margin-left: 3rem;
+    text-align: center
+  }
+  .myButton3{
+    grid-area:myButton3;
+    -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+    -webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+    box-shadow: 0px 1px 0px -5px #3dc21b;
+    background-color:#cd213b;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    border:1px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:-1px 0px 0px #2f6627;
+    text-align: center;
+    line-height:1.2rem;
+    height: 3rem;
+    width: fit-content;
+    margin-top: 1.2rem;
+    justify-self: center;
+  }
+  .myButton3:hover {
+    background-color:#b10f0fa2;
+    
+  }
+  .myButton3:active {
+    position:relative;
+    top:1px;
+  }
+  .hr{
+    grid-area: hr;
+    border-bottom: 12px solid red;
+    margin-left: 0rem;
+    width:8rem;
+    margin-top:3rem;
+    margin-bottom:-1rem;
+  justify-self: center;
+  
+  }
+  .vl{
+    
+    grid-area: vl;
+    border-left: 1px solid red;
+    width: fit-content;
+    
+  }
+  
+  /* our services section*/
+
+  .hr2{
+    border-bottom: 12px solid red;
+    width:8rem;
+    justify-self: center;
+    margin-top:3rem;
+    
+  }
+  .servicetext{
+    text-align: center;
+    margin-top:1.5rem;
+    
+  
+  }
+  .ourservices p{
+   display: none;
+  }
+  .row img{
+    width:300px;
+    height:300px;
+  }
+  h2.servicetext{
+    font-size:30px;
+    color: white;
+    margin-bottom:1rem;
+  }
+  
+  /* grid area for our services pictures*/
+  .row{
+    justify-items: center;
+    display:grid;
+    grid-row-gap:50px;
+    grid-template-areas:
+    "pics1" 
+    "pics2" 
+    "pics3" 
+    "pics4"
+    "pics5" 
+    "pics6";
+   
+  }
+  
+  a {text-decoration: none; }
+  .row h3{
+    text-align: center;
+    color:white;
+    margin-top: 1.5rem;
+  }
+  /* contact us on home page design*/
+  .contactushome{
+    background:#5b1446;
+    display:block;
+    /*
+    grid-template-areas: "hr3 ."
+    "h2 ." "p1 ." "p2 ." "h6 ." "p3 ." ".  form";*/
+    padding-top: 0.1rem;
+
+  }
+  .hr3{
+    border-bottom: 12px solid red;
+    margin-left: 8rem;
+    width:8rem;
+    margin-top:3rem;
+   
+  }
+  .hr4{
+    margin:0.5rem;
+      height: 0.8px;
+      border: 0;
+      background-color: white;
+  
+    
+  }
+  .contactushome h2{
+   margin: 1rem auto auto 0.8rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
+  }
+  
+  .p1,.p2,.p3{
+    margin-left: 0.8rem;
+    color: white;
+  }
+  form{
+    grid-area:form;
+  } 
+  
+  #formcontainer{
+    display:block;
+     width:100%;
+     margin-top:3rem;
+     justify-content: center;
+     margin-right: 3rem;
+   }
+  /*input[type="number"]{
+    width:37.8rem;
+  }*/
+  .colspace{
+    width:23.2rem;
+    margin:auto auto 0.3rem auto;
+  }
+  textarea{
+    width:23.2rem;
+  }
+  .myButton4 {
+  display:flex;
+    -moz-box-shadow: 0px 1px 0px -5px #3dc21b;
+    -webkit-box-shadow: 0px 1px 0px -5px #3dc21b;
+    box-shadow: 0px 1px 0px -5px #3dc21b;
+    background-color:#cd213b;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    border-radius:1px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:16px 31px;
+    text-decoration:none;
+    text-shadow:-1px 0px 0px #2f6627;
+    text-align: center;
+    line-height:1.2rem;
+    height: 3rem; 
+    justify-self:center;
+    width: fit-content;
+    margin-left: 6rem;
+  }
+  .column{
+    margin-bottom: 0.4rem;
+  }
+  .myButton4:hover {
+    background-color:#b10f0fa2;
+  }
+  .myButton4:active {
+    position:relative;
+    top:1px;
+  }
+  /* For header and body fonts font-family: 'Germania One', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto Slab', serif;*/
+  header{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  body{
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+}
+ 
+
+ 
+  
